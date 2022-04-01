@@ -1,36 +1,36 @@
-package ImcCalculation;
+
 
 import java.util.Scanner;
 
 public class ImcCalculation {
 
-	char sexo;
-	double peso;
-	double altura;
+	char gender;
+	double weight;
+	double height;
 
-	public double calculoImc(Double altura, Double peso) {
-		double alturaQuadrado = altura * altura;
-		double imc = peso / alturaQuadrado;
+	public double calculationImc(Double height, Double weight) {
+		double alturaQuadrado = height * height;
+		double imc = weight / alturaQuadrado;
 		return imc;
 
 	}
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		Scanner read = new Scanner(System.in);
 		ImcCalculation imc = new ImcCalculation();
 
 		System.out.println("Informe o sexo F feminino e M masculino");
-		imc.sexo = sc.next().charAt(0);
+		imc.gender = read.next().charAt(0);
 		System.out.println("Informe o peso: ");
-		imc.peso = sc.nextDouble();
+		imc.weight = read.nextDouble();
 		System.out.println("Informe a altura em metros");
-		imc.altura = sc.nextDouble();
+		imc.height = read.nextDouble();
 
-		var indiceImc = imc.calculoImc(imc.altura, imc.peso);
+		var indiceImc = imc.calculationImc(imc.height, imc.weight);
 
-		if (imc.sexo == 'M' || imc.sexo == 'm') {
-			if (imc.altura < 2.30) {
+		if (imc.gender == 'M' || imc.gender == 'm') {
+			if (imc.height < 2.30) {
 				if (indiceImc < 20.7) {
 					System.out.println("Abaixo do peso! ");
 				} else if (indiceImc >= 20.7 && indiceImc < 26.4) {
@@ -45,8 +45,8 @@ public class ImcCalculation {
 			} else {
 				System.out.println("Informe uma altura real");
 			}
-		} else if (imc.sexo == 'F' || imc.sexo == 'f') {
-			if (imc.altura < 2.30) {
+		} else if (imc.gender == 'F' || imc.gender == 'f') {
+			if (imc.height < 2.30) {
 				if (indiceImc < 19.1) {
 					System.out.println("Abaixo do peso! ");
 				} else if (indiceImc >= 19.1 && indiceImc < 25.8) {
