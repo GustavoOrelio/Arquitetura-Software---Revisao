@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+C:\Users\oreli\ArqSoft_Workspace\arquiteturasoftware\.metadata\.plugins\org.eclipse.jdt.core
-159348093.index
-1399850644.index
-1865797976.index
